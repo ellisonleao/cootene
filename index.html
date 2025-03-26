@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COOTENE - Cooperativa de Trabalho de Especialistas em Negócio</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #e1f1fd;
+            color: #4663ac;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #4663ac;
+            color: #e1f1fd;
+            padding: 20px 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #c1d8f0;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #e1f1fd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #c8d9ed;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #4663ac;
+            color: #e1f1fd;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 60px 0;
+            background-color: #e1f1fd;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 28px;
+            color: #4663ac;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .service-image {
+            height: 120px;
+            background-color: #c1d8f0;
+            margin-bottom: 10px;
+        }
+
+        .service-card h3 {
+            color: #4663ac;
+            margin-bottom: 5px;
+        }
+
+        /* Quem Somos Section */
+        .quem-somos {
+            padding: 60px 0;
+            background-color: #e1f1fd;
+        }
+
+        .team-members {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .team-member {
+            display: flex;
+            background-color: #ffffff;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .member-image {
+            flex: 1;
+            min-height: 200px;
+            background-color: #c1d8f0;
+        }
+
+        .member-description {
+            flex: 1;
+            padding: 30px;
+        }
+
+        .member-description h3 {
+            color: #4663ac;
+            margin-bottom: 10px;
+        }
+
+        .member-description p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #4663ac;
+            color: #e1f1fd;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-info {
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: #e1f1fd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #c8d9ed;
+        }
+
+        .copyright {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #d2deeb;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo"></div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Nossa área de atuação</a></li>
+                        <li><a href="#quem-somos">Nossos especialistas</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <h1><img src="img/logo.png"/></h1>
+            <p>Somos uma cooperativa de consultores especializados em ajudar negócios a crescerem e alcançarem seu potencial máximo. Com experiência, colaboração e inovação, oferecemos soluções personalizadas para empresas de todos os tamanhos.</p> </div> </section> <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Nossa área de atuação</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img class="service-image" src="img/planejamento.png" />
+                    <h3>Planejamento</h3>
+                </div>
+                <div class="service-card">
+                    <img class="service-image" src="img/qualidade.png" />
+                    <h3>Qualidade</h3>
+                </div>
+                <div class="service-card">
+                    <img class="service-image" src="img/financas.png" />
+                    <h3>Finanças</h3>
+                </div>
+                <div class="service-card">
+                    <img class="service-image" src="img/contabil.png" />
+                    <h3>Contábil</h3>
+                </div>
+                <div class="service-card">
+                    <img class="service-image" src="img/producao.png" />
+                    <h3>Produção</h3>
+                </div>
+                <div class="service-card">
+                    <img class="service-image" src="img/tecnologia.png" />
+                    <h3>Tecnologia da Informação</h3>
+                </div>
+                <div class="service-card">
+                    <img class="service-image" src="img/comercial.png" />
+                    <h3>Comercial</h3>
+                </div>
+                <div class="service-card">
+                    <img class="service-image" src="img/marketing.png" />
+                    <h3>Marketing</h3>
+                </div>
+                <div class="service-card">
+                    <img class="service-image" src="img/pessoas.png" />
+                    <h3>Pessoas</h3>
+                </div>
+                <div class="service-card">
+                    <img class="service-image" src="img/ambiental.png" />
+                    <h3>Ambiental</h3>
+                </div>
+                <div class="service-card">
+                    <img class="service-image" src="img/trabalho.png" />
+                    <h3>Saúde e Segurança do Trabalho</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quem-somos" id="quem-somos">
+        <div class="container">
+            <h2 class="section-title">Nossos Especialistas</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="img/cristiane.png"/>
+                    </div>
+                    <div class="member-description">
+                        <h3>Cristiane Gomes</h3>
+                        <p>Psicóloga Clínica e Organizacional, Doutora em Linguística | Pós Doutoranda, Pesquisadora, Escritora, Professora, Palestrante, Consultora em Gestão de Pessoas. Consultora Sebrae. Consultora do MAC por 5 anos implementando manuais em modelo de excelência critério pessoas em órgãos públicos estaduais e municipais. Responsável pela elaboração de conteúdos em gestão de pessoas e cooperativismo (mídia imprensa e audiovisual) e facilitadora de treinamentos com cooperativas alagoana. Colaboradora de conteúdo para Folha PE e Rádio Mix em Maceió. Cofundadora dos Programas destinados a mulheres e mães empreendedoras. E cofundadora de programa para cuidar da reserva cognitiva. Membro da Academia Maceioense de Letras. Mãe de Lucas e Lavínia.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="img/edson-sa.png" />
+                    </div>
+                    <div class="member-description">
+                        <h3>Edson Sá</h3>
+                        <p>Consultor e mentor empresarial especializado em planejamento estratégico, liderança e inovação. Com MBA em Desenvolvimento Humano e Psicologia Positiva, especialização em Desenvolvimento Organizacional e Coaching & Liderança, possui ampla experiência na capacitação de gestores e empreendedores. Atua como palestrante e professor, compartilhando conhecimento em gestão, desenvolvimento humano e competitividade empresarial. Sua expertise inclui metodologias de excelência em gestão, formação de líderes e apoio à inovação em organizações de diversos setores.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="img/domingos.png"/>
+                    </div>
+                    <div class="member-description">
+                        <h3>Domingos Leão</h3>
+                        <p>Graduado em Engenharia Elétrica, com especializações em Gestão Empresarial e em Marketing. Após uma carreira profissional de mais de 20 anos na área de gestão de negócios em empresas nacionais e internacionais, atua há 18 anos como Consultor Organizacional, nas áreas de Planejamento, Gestão por Processos e Gestão da Qualidade. Realiza consultorias junto ao Sebrae e Fundação Nacional da Qualidade (FNQ), atuando também como avaliador de Gestão da Qualidade com base no Modelo de Excelência da Gestão da (FNQ) nos prêmios Melhores em Gestão e SomosCoop.</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image"></div>
+                    <div class="member-description">
+                        <h3>Ana Paula Barreto</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="img/artur.png" />
+                    </div>
+                    <div class="member-description">
+                        <h3>Artur Lima</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="img/gildenor.png" />
+                    </div>
+                    <div class="member-description">
+                        <h3>Gildenor Leite</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image"></div>
+                    <div class="member-description">
+                        <h3>Ednildo Silva</h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <!-- <p>123 Anywhere St., Any City, ST 12345</p> -->
+                    <!-- <p>123-456-7890</p> -->
+                    <!-- <p>hello@reallygreatsite.com</p> -->
+                </div>
+                <div class="social-links">
+                    <!-- <a href="#">LinkedIn</a> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
