@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="COOTENE - Cooperativa de consultores especializados em ajudar negócios a crescerem. Soluções personalizadas em gestão, contabilidade, RH e mais.">
     <title>COOTENE - Cooperativa de Trabalho de Especialistas em Negócio</title>
     <style>
         /* Basic Reset */
@@ -154,6 +155,17 @@
             flex: 1;
             min-height: 200px;
             background-color: #c1d8f0;
+            position: relative;
+        }
+
+        .member-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         img {
@@ -290,6 +302,19 @@
         .text-red {
             color: #ff0000;
         }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .team-member {
+                flex-direction: column;
+            }
+
+            .member-image {
+                min-height: 250px;
+                height: 250px;
+                flex: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -311,8 +336,8 @@
 
     <section class="hero" id="home">
         <div class="container">
-            <h1><img src="img/logo.png"/></h1>
-            <h1><img style="width: 5em;" src="img/somos-coop-1.png"/></h1>
+            <h1><img src="img/logo.png" alt="COOTENE Logo"/></h1>
+            <h1><img style="width: 5em;" src="img/somos-coop-1.png" alt="Somos Coop"/></h1>
             <p>Somos uma cooperativa de consultores especializados em ajudar negócios a crescerem e alcançarem seu
           potencial máximo. Com experiência, colaboração e inovação, oferecemos soluções personalizadas para empresas de
           todos os tamanhos.</p> </div>
@@ -355,7 +380,7 @@
             <div class="team-members">
                 <div class="team-member">
                     <div class="member-image">
-                        <img src="img/artur.png" />
+                        <img src="img/artur.png" alt="Artur Lima da Silva" />
                     </div>
                     <div class="member-description">
                         <h2>Cooperado Artur Lima da Silva</h2>
@@ -375,7 +400,7 @@
 
                 <div class="team-member">
                     <div class="member-image">
-                        <img src="img/cristiane.png" />
+                        <img src="img/cristiane.png" alt="Cristiane Gomes de Souza" />
                     </div>
                     <div class="member-description">
                         <h2>Cooperada Cristiane Gomes de Souza</h2>
@@ -400,7 +425,7 @@
 
                 <div class="team-member">
                     <div class="member-image">
-                        <img src="img/debora.png" />
+                        <img src="img/debora.png" alt="Débora da Silva Lins" />
                     </div>
                     <div class="member-description">
                         <h2>Cooperada Débora da Silva Lins</h2>
@@ -423,7 +448,7 @@
 
                 <div class="team-member">
                     <div class="member-image">
-                        <img src="img/domingos.png" />
+                        <img src="img/domingos.png" alt="Domingos Sávio S. Leão" />
                     </div>
                     <div class="member-description">
                         <h2>Cooperado Domingos Sávio S. Leão</h2>
@@ -441,7 +466,7 @@
 
                 <div class="team-member">
                     <div class="member-image">
-                        <img src="img/ednildo.png" />
+                        <img src="img/ednildo.png" alt="Ednildo José da Silva" />
                     </div>
                     <div class="member-description">
                         <h2>Cooperado Ednildo José da Silva</h2>
@@ -459,7 +484,7 @@
 
                 <div class="team-member">
                     <div class="member-image">
-                        <img src="img/edson-sa.png" />
+                        <img src="img/edson-sa.png" alt="Edson Sá" />
                     </div>
                     <div class="member-description">
                         <h2>Cooperado Edson Sá</h2>
@@ -478,7 +503,7 @@
 
                 <div class="team-member">
                     <div class="member-image">
-                        <img src="img/lucas.png" />
+                        <img src="img/lucas.png" alt="Lucas Henrique B. Nobre" />
                     </div>
                     <div class="member-description">
                         <h2>Cooperado Lucas Henrique B. Nobre</h2>
@@ -498,7 +523,7 @@
 
                 <div class="team-member">
                     <div class="member-image">
-                        <img src="img/rafael.png" />
+                        <img src="img/rafael.png" alt="Rafael Aparecido Bezerra" />
                     </div>
                     <div class="member-description">
                         <h2>Cooperado Rafael Aparecido Bezerra</h2>
@@ -549,10 +574,10 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-info">
-                    <p><img src="img/somos-coop-2.png"/></p>
+                    <p><img src="img/somos-coop-2.png" alt="Somos Coop"/></p>
                 </div>
                 <div class="social-links">
-                  <a href="#home"><img style="height: 90px" src="img/logo.png"/></a>
+                  <a href="#home"><img style="height: 90px" src="img/logo.png" alt="COOTENE Logo"/></a>
                 </div>
             </div>
         </div>
