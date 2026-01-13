@@ -97,8 +97,8 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: 1fr;
+            gap: 30px;
         }
 
         .service-card {
@@ -106,7 +106,17 @@
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            text-align: left;
+            border-left: 1px solid #4663ac;
+        }
+
+        .service-card h3 {
+          text-align: left;
+          color: #4663ac;
+        }
+
+        .service-card ul {
+          margin-left: 17px;
         }
 
         .service-image {
@@ -164,6 +174,15 @@
         .member-description p {
             color: #666;
             line-height: 1.6;
+        }
+
+        .member-description h2 {
+            border-bottom: 1px solid;
+            margin-bottom: 2em;
+        }
+
+        .member-description ol {
+          margin-left: 1em;
         }
 
         /* Footer */
@@ -280,8 +299,6 @@
                 <div class="logo"></div>
                 <nav>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Nossa área de atuação</a></li>
                         <li><a href="#quem-somos">Nossos especialistas</a></li>
                         <li><a href="#contact">Contato</a></li>
                     </ul>
@@ -290,56 +307,43 @@
         </div>
     </header>
 
+
+
     <section class="hero" id="home">
         <div class="container">
             <h1><img src="img/logo.png"/></h1>
-            <p>Somos uma cooperativa de consultores especializados em ajudar negócios a crescerem e alcançarem seu potencial máximo. Com experiência, colaboração e inovação, oferecemos soluções personalizadas para empresas de todos os tamanhos.</p> </div> </section> <section class="services" id="services">
+            <h1><img style="width: 5em;" src="img/somos-coop-1.png"/></h1>
+            <p>Somos uma cooperativa de consultores especializados em ajudar negócios a crescerem e alcançarem seu
+          potencial máximo. Com experiência, colaboração e inovação, oferecemos soluções personalizadas para empresas de
+          todos os tamanhos.</p> </div>
+    </section>
+
+    <section class="services">
         <div class="container">
-            <h2 class="section-title">Nossa área de atuação</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <img class="service-image" src="img/planejamento.png" />
-                    <h3>Planejamento</h3>
+                    <h3>Propósito</h3>
+                    <p>Potencializar o impacto positivo no mercado e na sociedade por meio da união de competências
+              especializadas, promovendo soluções estratégicas, inovadoras e sustentáveis para o desenvolvimento de
+              empresas e organizações, enquanto valoriza e fortalece o trabalho cooperativo dos seus membros.</p>
                 </div>
                 <div class="service-card">
-                    <img class="service-image" src="img/qualidade.png" />
-                    <h3>Qualidade</h3>
+                    <h3>Missão</h3>
+                    <p>Levar empresas de todos os tamanhos e setores a alcançarem seu máximo potencial, fornecendo soluções personalizadas e inovadoras que impulsionem o crescimento sustentável, a eficiência operacional e a criação de valor para todas as partes interessadas.</p>
                 </div>
                 <div class="service-card">
-                    <img class="service-image" src="img/financas.png" />
-                    <h3>Finanças</h3>
+                    <h3>Visão</h3>
+                    <p>Ser reconhecida como a melhor parceira estratégica para negócios, oferecendo conhecimento especializado e soluções personalizadas que garantam crescimento e solidez no mercado.</p>
                 </div>
                 <div class="service-card">
-                    <img class="service-image" src="img/contabil.png" />
-                    <h3>Contábil</h3>
-                </div>
-                <div class="service-card">
-                    <img class="service-image" src="img/producao.png" />
-                    <h3>Produção</h3>
-                </div>
-                <div class="service-card">
-                    <img class="service-image" src="img/tecnologia.png" />
-                    <h3>Tecnologia da Informação</h3>
-                </div>
-                <div class="service-card">
-                    <img class="service-image" src="img/comercial.png" />
-                    <h3>Comercial</h3>
-                </div>
-                <div class="service-card">
-                    <img class="service-image" src="img/marketing.png" />
-                    <h3>Marketing</h3>
-                </div>
-                <div class="service-card">
-                    <img class="service-image" src="img/pessoas.png" />
-                    <h3>Pessoas</h3>
-                </div>
-                <div class="service-card">
-                    <img class="service-image" src="img/ambiental.png" />
-                    <h3>Ambiental</h3>
-                </div>
-                <div class="service-card">
-                    <img class="service-image" src="img/trabalho.png" />
-                    <h3>Saúde e Segurança do Trabalho</h3>
+                    <h3>Valores</h3>
+                    <ul>
+                      <li>Excelência em tudo o que fazemos</li>
+                      <li>Colaboração</li>
+                      <li>Integridade</li>
+                      <li>Inovação</li>
+                      <li>Responsabilidade Social e Ambiental</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -347,74 +351,170 @@
 
     <section class="quem-somos" id="quem-somos">
         <div class="container">
-            <h2 class="section-title">Nossos Especialistas</h2>
+            <h1 class="section-title">Nossos Especialistas</h1>
             <div class="team-members">
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="img/cristiane.png"/>
-                    </div>
-                    <div class="member-description">
-                        <h3>Cristiane Souza</h3>
-                        <p>Psicóloga Clínica e Organizacional, Doutora em Linguística | Pós Doutoranda, Pesquisadora, Escritora, Professora, Palestrante, Consultora em Gestão de Pessoas. Consultora Sebrae. Consultora do MAC por 5 anos implementando manuais em modelo de excelência critério pessoas em órgãos públicos estaduais e municipais. Responsável pela elaboração de conteúdos em gestão de pessoas e cooperativismo (mídia imprensa e audiovisual) e facilitadora de treinamentos com cooperativas alagoana. Colaboradora de conteúdo para Folha PE e Rádio Mix em Maceió. Cofundadora dos Programas destinados a mulheres e mães empreendedoras. E cofundadora de programa para cuidar da reserva cognitiva. Membro da Academia Maceioense de Letras. Mãe de Lucas e Lavínia.</p>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="img/edson-sa.png" />
-                    </div>
-                    <div class="member-description">
-                        <h3>Edson Sá</h3>
-                        <p>Consultor e mentor empresarial especializado em planejamento estratégico, liderança e inovação. Com MBA em Desenvolvimento Humano e Psicologia Positiva, especialização em Desenvolvimento Organizacional e Coaching & Liderança, possui ampla experiência na capacitação de gestores e empreendedores. Atua como palestrante e professor, compartilhando conhecimento em gestão, desenvolvimento humano e competitividade empresarial. Sua expertise inclui metodologias de excelência em gestão, formação de líderes e apoio à inovação em organizações de diversos setores.</p>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="img/domingos.png"/>
-                    </div>
-                    <div class="member-description">
-                        <h3>Domingos Leão</h3>
-                        <p>Graduado em Engenharia Elétrica, com especializações em Gestão Empresarial e em Marketing. Após uma carreira profissional de mais de 20 anos na área de gestão de negócios em empresas nacionais e internacionais, atua há 18 anos como Consultor Organizacional, nas áreas de Planejamento, Gestão por Processos e Gestão da Qualidade. Realiza consultorias junto ao Sebrae e Fundação Nacional da Qualidade (FNQ), atuando também como avaliador de Gestão da Qualidade com base no Modelo de Excelência da Gestão da (FNQ) nos prêmios Melhores em Gestão e SomosCoop.</p>
-                    </div>
-                </div>
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="img/ana-paula.png" />
-                    </div>
-                    <div class="member-description">
-                        <h3>Ana Paula Barreto</h3>
-                        <p>Psicóloga Clínica, especialista em Terapia Cognitivo Comportamental pelo Grupo PBE, FLNC, Salvador -BA.  Empresária em Alagoas por 10 anos. Apaixonada por psicologia e pelas relações interpessoais.</p>
-                    </div>
-                </div>
                 <div class="team-member">
                     <div class="member-image">
                         <img src="img/artur.png" />
                     </div>
                     <div class="member-description">
-                        <h3>Artur Lima</h3>
+                        <h2>Cooperado Artur Lima da Silva</h2>
+                        <h3>Mini-Currículo</h3> 
                         <p>Contador e empresário contábil. Formação: Contabilidade, Compliance & Direito Tributário pela (BSSP). MBA em Gestão Financeira, Controladoria e Auditoria pela (FGV). Auditoria Contábil e Fiscal pelo (CEAP). Consultor da OCB/AL, Especialista em Cooperativas. Contador com mais de 20 anos de experiência.</p>
+                        <br>
+                        <h3>Áreas de atuação</h3>
+                        <ol>
+                          <li>Contabilidade Geral</li>
+                          <li>Contabilidade Fiscal e Tributária</li>
+                          <li>Contabilidade Trabalhista</li>
+                          <li>Contabilidade Gerencial</li>
+                          <li>Controladoria.</li>
+                        </ol>
                     </div>
                 </div>
+
                 <div class="team-member">
                     <div class="member-image">
-                        <img src="img/gildenor.png" />
+                        <img src="img/cristiane.png" />
                     </div>
                     <div class="member-description">
-                        <h3>Gildenor Leite</h3>
-                        <p>Profissional com sólida formação multidisciplinar nas áreas de engenharia de produção, segurança do trabalho, administração de empresas e pedagogia. Possui especialização em gestão ambiental, gestão comercial e docência no ensino técnico e profissional, além de mestrado em tecnologias ambientais. Apresenta expertise em Gestão Educacional.</p>
+                        <h2>Cooperada Cristiane Gomes de Souza</h2>
+                        <h3>Mini-Currículo</h3> 
+                        <p>Psicóloga e pesquisadora, doutora em linguística, pós-doutoranda com forte atuação
+                interdisciplinar, conectando Psicologia, Serviço Social e Educação, desenvolve pesquisas e ações em
+                Psicologia Clínica e Organizacional, professora universitária, mentora e consultora em desenvolvimento
+                de competências em Liderança. Cocria iniciativas e programas em saúde mental e equidade de gênero, com
+                tese sobre mulheres de negócios. Implementadora de Saúde Mental NR1 (Certificada MEC). Líder do Grupo
+                Mulheres do Brasil (Núcleo Maceió-AL).</p>
+                        <br>
+                        <h3>Áreas de atuação</h3>
+                        <ol>
+                          <li>Liderança Baseada em Competências</li>
+                          <li>Protocolos de Saúde Mental Organizacional (NR1) </li>
+                          <li>Mentoria Estruturada para Mulheres</li>
+                          <li>Análise de Clima Organizacional e Cultura Institucional</li>
+                          <li>Metodologias Participativas e Experiências de Aprendizagem.</li>
+                        </ol>
                     </div>
                 </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="img/debora.png" />
+                    </div>
+                    <div class="member-description">
+                        <h2>Cooperada Débora da Silva Lins</h2>
+                        <h3>Mini-Currículo</h3> 
+                        <p>Graduada em Direito, Tecnóloga em Gestão de RH e em Segurança do Trabalho. Pós Graduada em
+                Consultoria e Assessoria Empresarial. Experiência em gestão de pessoas, desenvolvimento organizacional e
+                processos de recrutamento e seleção. Atuação em treinamento, desenvolvimento de equipes e implementação
+                de práticas que contribuem para a retenção de talentos e melhoria do clima organizacional.</p>
+                        <br>
+                        <h3>Áreas de atuação</h3>
+                        <ol>
+                          <li>Gestão Estratégica de pessoas</li>
+                          <li>Implementação da metodologia 5S </li>
+                          <li>Consultoria em Licitações</li>
+                          <li>Consultoria de Clima Organizacional e Gestão de Conflitos</li>
+                          <li>Suporte à liderança em tomadas de decisão sobre pessoas. </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="img/domingos.png" />
+                    </div>
+                    <div class="member-description">
+                        <h2>Cooperado Domingos Sávio S. Leão</h2>
+                        <h3>Mini-Currículo</h3> 
+                        <p>Graduado em Engenharia Elétrica, com especializações em Gestão Empresarial e em Marketing. Após uma carreira profissional de mais de 20 anos na área de gestão de negócios em empresas nacionais e internacionais, atua há 18 anos como Consultor Organizacional, nas áreas de Planejamento, Gestão por Processos e Gestão da Qualidade. Realiza consultorias junto ao Sebrae e Fundação Nacional da Qualidade (FNQ), atuando também como avaliador de Gestão da Qualidade com base no Modelo de Excelência da Gestão da (FNQ) nos prêmios Melhores em Gestão e SomosCoop.</p>
+                        <br>
+                        <h3>Áreas de atuação</h3>
+                        <ol>
+                          <li>Gestão da Qualidade</li>
+                          <li>Modelo de Excelência da Gestão - MEG22 </li>
+                          <li>Mapeamento e Controle de Processos</li>
+                        </ol>
+                    </div>
+                </div>
+
                 <div class="team-member">
                     <div class="member-image">
                         <img src="img/ednildo.png" />
                     </div>
                     <div class="member-description">
-                        <h3>Ednildo José da Silva</h3>
-                        <p>Graduado em Administração Financeira (2009). MBA em Finanças Corporativa, Controladoria e
-                        Auditoria (2019). Certificação Internacional ITIL (2013). Sócio Fundador e Diretor Presidente
-                        Macrocoop - Cooperativa de Trabalho dos Profissionais em Informática e Telecomunicações Ltda.
-                        (2001). Palestrante e instrutor nas áreas de cooperativismo, associativismo, empreendedorismo, finanças pessoais, planejamento estratégico, plano de negócio e análise de viabilidade técnica econômico e financeira para implantação ou expansão de negócios.</p>
+                        <h2>Cooperado Ednildo José da Silva</h2>
+                        <h3>Mini-Currículo</h3> 
+                        <p>Graduado em Administração Financeira, com MBA em Finanças Corporativas, Controladoria e Auditoria. Possui Certificação Internacional ITIL. É Sócio Fundador e Diretor Presidente da MACROCOOP - Cooperativa de Trabalho dos Profissionais em Informática e Telecomunicações Ltda. Palestrante e instrutor nas áreas de cooperativismo, associativismo, empreendedorismo, finanças pessoais, planejamento estratégico, plano de negócio e análise de viabilidade técnica econômico e financeira para implantação ou expansão de negócios.</p>
+                        <br>
+                        <h3>Áreas de atuação</h3>
+                        <ol>
+                          <li>Instrutoria em cooperativismo e associativismo</li>
+                          <li>Consultor em Finanças Pessoais </li>
+                          <li>Consultor em Planejamento Estratégico e Plano de Negócio</li>
+                        </ol>
                     </div>
                 </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="img/edson-sa.png" />
+                    </div>
+                    <div class="member-description">
+                        <h2>Cooperado Edson Sá</h2>
+                        <h3>Mini-Currículo</h3> 
+                        <p>Graduado em Administração. Consultor empresarial especializado em planejamento estratégico, liderança, desenvolvimento organizacional e fortalecimento de cooperativas. Possui MBA em Desenvolvimento Humano e Psicologia Positiva e especializações em Desenvolvimento Organizacional e Coaching & Liderança. Atua como palestrante e professor, capacitando gestores, empreendedores e cooperados, promovendo inovação, excelência em gestão e potencialização da atuação de líderes</p>
+                        <br>
+                        <h3>Áreas de atuação</h3>
+                        <ol>
+                          <li>Coaching, Mentoria e Orientação Empresarial</li>
+                          <li>Relacionamento com o cliente </li>
+                          <li>Planejamento Estratégico</li>
+                          <li>MEG / PDGC</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="img/lucas.png" />
+                    </div>
+                    <div class="member-description">
+                        <h2>Cooperado Lucas Henrique B. Nobre</h2>
+                        <h3>Mini-Currículo</h3> 
+                        <p>Contador, empresário e perito judicial, com mais de 13 anos de experiência em gestão contábil, financeira e tributária. MBA em Gestão Financeira, Controladoria e Auditoria (FGV) e MBA em Gestão Tributária, Auditoria e Contabilidade (IPOG). Atuação em planejamento tributário, recuperação de créditos fiscais, negociação de débitos e organização financeira de empresas nos regimes Simples, Lucro Presumido e Lucro Real.</p>
+                        <br>
+                        <h3>Áreas de atuação</h3>
+                        <ol>
+                          <li>Gestão Tributária e Planejamento Tributário</li>
+                          <li>Recuperação de Créditos Fiscais</li>
+                          <li>Negociação de Débitos Tributários</li>
+                          <li>BPO Financeiro e Gestão de Fluxo de Caixa</li>
+                          <li>Perícia Contábil e Financeira. </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="img/rafael.png" />
+                    </div>
+                    <div class="member-description">
+                        <h2>Cooperado Rafael Aparecido Bezerra</h2>
+                        <h3>Mini-Currículo</h3> 
+                        <p>Graduado em Comunicação Social com habilitação em Publicidade e Propaganda. Mais de 15 anos de atuação em Comunicação Publicitária, com sólida experiência em produção publicitária, planejamento de mídia e compra de espaços nos principais veículos de mídia como TV, rádio, ooh e dooh. Especialista em Comunicação Digital e Novas Mídias. Visão analítica, organização e expertise em gestão de campanhas orientadas por dados. Atuou em diversos segmentos do mercado, coordenando produções gráficas e audiovisuais, conduzindo negociações estratégicas com fornecedores e veículos, participação em campanhas premiadas ao longo da carreira.</p>
+                        <br>
+                        <h3>Áreas de atuação</h3>
+                        <ol>
+                          <li>Produção Publicitária</li>
+                          <li>Planejamento de Mídia </li>
+                          <li>Compra de espaços nos veículos de mídia</li>
+                          <li>Comunicação Digital</li>
+                        </ol>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -449,12 +549,10 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-info">
-                    <!-- <p>123 Anywhere St., Any City, ST 12345</p> -->
-                    <!-- <p>123-456-7890</p> -->
-                    <!-- <p>hello@reallygreatsite.com</p> -->
+                    <p><img src="img/somos-coop-2.png"/></p>
                 </div>
                 <div class="social-links">
-                    <!-- <a href="#">LinkedIn</a> -->
+                  <a href="#home"><img style="height: 90px" src="img/logo.png"/></a>
                 </div>
             </div>
         </div>
