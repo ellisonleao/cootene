@@ -428,6 +428,12 @@ nav ul li a:hover {
     background: var(--primary-dark);
 }
 
+.submit-btn:focus {
+    background: var(--primary-dark);
+    outline: 2px solid var(--text);
+    outline-offset: 2px;
+}
+
 footer {
     padding: 60px 0 30px;
     background: var(--text);
