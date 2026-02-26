@@ -5,647 +5,350 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="COOTENE - Cooperativa de Trabalho de Especialistas em Negócio">
     <title>COOTENE - Cooperativa de Trabalho de Especialistas em Negócio</title>
-    <style>
-        /* Basic Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            background-color: #e1f1fd;
-            color: #4663ac;
-            line-height: 1.6;
-        }
-
-        /* Header Styles */
-        header {
-            background-color: #4663ac;
-            color: #e1f1fd;
-            padding: 20px 0;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #c1d8f0;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 20px;
-        }
-
-        nav ul li a {
-            color: #e1f1fd;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #c8d9ed;
-        }
-
-        /* Hero Section */
-        .hero {
-            background-color: #4663ac;
-            color: #e1f1fd;
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Services Section */
-        .services {
-            padding: 60px 0;
-            background-color: #e1f1fd;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 28px;
-            color: #4663ac;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
-        }
-
-        .service-card {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
-            border-left: 1px solid #4663ac;
-        }
-
-        .service-card h3 {
-          text-align: left;
-          color: #4663ac;
-        }
-
-        .service-card ul {
-          margin-left: 17px;
-        }
-
-        .service-image {
-            height: 120px;
-            background-color: #c1d8f0;
-            margin-bottom: 10px;
-        }
-
-        .service-card h3 {
-            color: #4663ac;
-            margin-bottom: 5px;
-        }
-
-        /* Quem Somos Section */
-        .quem-somos {
-            padding: 60px 0;
-            background-color: #e1f1fd;
-        }
-
-        .team-members {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .team-member {
-            display: flex;
-            background-color: #ffffff;
-            border-radius: 5px;
-            overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .member-image {
-            flex: 1;
-            min-height: 200px;
-            background-color: #c1d8f0;
-            position: relative;
-        }
-
-        .member-image img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .member-description {
-            flex: 1;
-            padding: 30px;
-        }
-
-        .member-description h3 {
-            color: #4663ac;
-            margin-bottom: 10px;
-        }
-
-        .member-description p {
-            color: #666;
-            line-height: 1.6;
-        }
-
-        .member-description h2 {
-            border-bottom: 1px solid;
-            margin-bottom: 2em;
-        }
-
-        .member-description ol {
-          margin-left: 1em;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #4663ac;
-            color: #e1f1fd;
-            padding: 30px 0;
-            text-align: center;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .footer-info {
-            margin-bottom: 20px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-        }
-
-        .social-links a {
-            color: #e1f1fd;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .social-links a:hover {
-            color: #c8d9ed;
-        }
-
-        .copyright {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #d2deeb;
-        }
-        
-        /* Contact Form Styles */
-        .contact {
-            padding: 60px 0;
-            background-color: #f5f9fe;
-        }
-        
-        .contact-form-container {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            color: #4663ac;
-            font-weight: bold;
-        }
-        
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-        
-        .form-group textarea {
-            resize: vertical;
-        }
-        
-        .submit-btn {
-            background-color: #4663ac;
-            color: #ffffff;
-            border: none;
-            border-radius: 4px;
-            padding: 12px 24px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        
-        .submit-btn:hover {
-            background-color: #3a5291;
-        }
-
-        .form-center {
-            text-align: center;
-        }
-
-        .text-gray {
-            color: #666;
-        }
-
-        .text-red {
-            color: #ff0000;
-        }
-
-        /* Responsive styles */
-        @media (max-width: 768px) {
-            .team-member {
-                flex-direction: column;
-            }
-
-            .member-image {
-                min-height: 250px;
-                height: 250px;
-                flex: none;
-            }
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo"></div>
+                <a href="#" class="logo">
+                    <img src="img/logo-small.png" alt="COOTENE">
+                </a>
                 <nav>
                     <ul>
-                        <li><a href="#quem-somos">Nossos especialistas</a></li>
-                        <li><a href="#contact">Contato</a></li>
+                        <li><a href="#proposito">Propósito</a></li>
+                        <li><a href="#especialistas">Especialistas</a></li>
+                        <li><a href="#contato">Fale Conosco</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-
-
-    <section class="hero" id="home">
+    <section class="hero">
         <div class="container">
-            <h1><img src="img/logo.png" alt="COOTENE Logo"/></h1>
-            <h1><img style="width: 5em;" src="img/somos-coop-1.png" alt="Somos Coop"/></h1>
-            <p>Somos uma cooperativa de consultores especializados em ajudar negócios a crescerem e alcançarem seu
-          potencial máximo. Com experiência, colaboração e inovação, oferecemos soluções personalizadas para empresas de
-          todos os tamanhos.</p> </div>
+            <div class="hero-grid">
+                <div>
+                    <h1>Potencialize seu <span>Impacto</span> no Mercado.</h1>
+                    <p class="hero-subtitle">Somos uma cooperativa de consultores especializados em ajudar negócios a crescerem e alcançarem seu potencial máximo. Com experiência, colaboração e inovação, oferecemos soluções personalizadas para empresas de todos os tamanhos.</p>
+                    <a href="#especialistas" class="hero-cta">
+                        Ver Consultores
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="hero-images">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200" alt="Equipe em colaboração" class="hero-main-img">
+                    <img src="img/somos-coop-1.png" alt="Somos Coop" class="hero-badge-img">
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="services">
+    <section class="purpose-section" id="proposito">
         <div class="container">
-            <div class="services-grid">
-                <div class="service-card">
+            <div class="section-header">
+                <p class="section-label">+100% Foco em Valor</p>
+                <h2 class="section-title">Crescimento</h2>
+            </div>
+            <div class="purpose-grid">
+                <div class="purpose-card">
+                    <div class="purpose-icon">🎯</div>
                     <h3>Propósito</h3>
-                    <p>Potencializar o impacto positivo no mercado e na sociedade por meio da união de competências
-              especializadas, promovendo soluções estratégicas, inovadoras e sustentáveis para o desenvolvimento de
-              empresas e organizações, enquanto valoriza e fortalece o trabalho cooperativo dos seus membros.</p>
+                    <p>Potencializar o impacto positivo no mercado através da união de competências especializadas e inovação sustentável.</p>
                 </div>
-                <div class="service-card">
+                <div class="purpose-card">
+                    <div class="purpose-icon">🚀</div>
                     <h3>Missão</h3>
-                    <p>Levar empresas de todos os tamanhos e setores a alcançarem seu máximo potencial, fornecendo soluções personalizadas e inovadoras que impulsionem o crescimento sustentável, a eficiência operacional e a criação de valor para todas as partes interessadas.</p>
+                    <p>Levar empresas ao máximo potencial, fornecendo soluções personalizadas que impulsionem a eficiência e criação de valor.</p>
                 </div>
-                <div class="service-card">
+                <div class="purpose-card">
+                    <div class="purpose-icon">👁️</div>
                     <h3>Visão</h3>
-                    <p>Ser reconhecida como a melhor parceira estratégica para negócios, oferecendo conhecimento especializado e soluções personalizadas que garantam crescimento e solidez no mercado.</p>
+                    <p>Ser a parceira estratégica definitiva, reconhecida pelo conhecimento técnico e solidez em resultados de mercado.</p>
                 </div>
-                <div class="service-card">
+                <div class="purpose-card">
+                    <div class="purpose-icon">💎</div>
                     <h3>Valores</h3>
                     <ul>
-                      <li>Excelência em tudo o que fazemos</li>
-                      <li>Colaboração</li>
-                      <li>Integridade</li>
-                      <li>Inovação</li>
-                      <li>Responsabilidade Social e Ambiental</li>
+                        <li>Excelência</li>
+                        <li>Colaboração</li>
+                        <li>Integridade</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="quem-somos" id="quem-somos">
+    <section class="team-section" id="especialistas">
         <div class="container">
-            <h1 class="section-title">Nossos Especialistas</h1>
-            <div class="team-members">
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="img/artur.png" alt="Artur Lima da Silva" />
+            <div class="section-header">
+                <p class="section-label">Nossa Inteligência Coletiva</p>
+                <h2 class="section-title">Conheça os especialistas cooperados que lideram a transformação em cada área de negócio.</h2>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="img/artur.png" alt="Artur Lima da Silva" class="team-img">
                     </div>
-                    <div class="member-description">
-                        <h2>Cooperado Artur Lima da Silva</h2>
-                        <h3>Mini-Currículo</h3> 
-                        <p>Contador e empresário contábil. Formação: Contabilidade, Compliance & Direito Tributário pela (BSSP). MBA em Gestão Financeira, Controladoria e Auditoria pela (FGV). Auditoria Contábil e Fiscal pelo (CEAP). Consultor da OCB/AL, Especialista em Cooperativas. Contador com mais de 20 anos de experiência.</p>
-                        <br>
-                        <h3>Áreas de atuação</h3>
-                        <ol>
-                          <li>Contabilidade Geral</li>
-                          <li>Contabilidade Fiscal e Tributária</li>
-                          <li>Contabilidade Trabalhista</li>
-                          <li>Contabilidade Gerencial</li>
-                          <li>Controladoria.</li>
-                        </ol>
-                    </div>
-                </div>
-
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="img/cristiane.png" alt="Cristiane Gomes de Souza" />
-                    </div>
-                    <div class="member-description">
-                        <h2>Cooperada Cristiane Gomes de Souza</h2>
-                        <h3>Mini-Currículo</h3> 
-                        <p>Psicóloga e pesquisadora, doutora em linguística, pós-doutoranda com forte atuação
-                interdisciplinar, conectando Psicologia, Serviço Social e Educação, desenvolve pesquisas e ações em
-                Psicologia Clínica e Organizacional, professora universitária, mentora e consultora em desenvolvimento
-                de competências em Liderança. Cocria iniciativas e programas em saúde mental e equidade de gênero, com
-                tese sobre mulheres de negócios. Implementadora de Saúde Mental NR1 (Certificada MEC). Líder do Grupo
-                Mulheres do Brasil (Núcleo Maceió-AL).</p>
-                        <br>
-                        <h3>Áreas de atuação</h3>
-                        <ol>
-                          <li>Liderança Baseada em Competências</li>
-                          <li>Protocolos de Saúde Mental Organizacional (NR1) </li>
-                          <li>Mentoria Estruturada para Mulheres</li>
-                          <li>Análise de Clima Organizacional e Cultura Institucional</li>
-                          <li>Metodologias Participativas e Experiências de Aprendizagem.</li>
-                        </ol>
+                    <div class="team-info">
+                        <p class="team-area">Finanças & Compliance</p>
+                        <h3 class="team-name">Artur Lima da Silva</h3>
+                        <p class="team-quote">"Contador e empresário contábil com MBA pela FGV e mais de 20 anos de experiência em gestão financeira e cooperativismo."</p>
+                        <p class="team-expertise-title">Expertise</p>
+                        <div class="team-expertise">
+                            <span>Contabilidade Geral</span>
+                            <span>Direito Tributário</span>
+                            <span>Controladoria</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="img/debora.png" alt="Débora da Silva Lins" />
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="img/cristiane.png" alt="Cristiane Gomes de Souza" class="team-img">
                     </div>
-                    <div class="member-description">
-                        <h2>Cooperada Débora da Silva Lins</h2>
-                        <h3>Mini-Currículo</h3> 
-                        <p>Graduada em Direito, Tecnóloga em Gestão de RH e em Segurança do Trabalho. Pós Graduada em
-                Consultoria e Assessoria Empresarial. Experiência em gestão de pessoas, desenvolvimento organizacional e
-                processos de recrutamento e seleção. Atuação em treinamento, desenvolvimento de equipes e implementação
-                de práticas que contribuem para a retenção de talentos e melhoria do clima organizacional.</p>
-                        <br>
-                        <h3>Áreas de atuação</h3>
-                        <ol>
-                          <li>Gestão Estratégica de pessoas</li>
-                          <li>Implementação da metodologia 5S </li>
-                          <li>Consultoria em Licitações</li>
-                          <li>Consultoria de Clima Organizacional e Gestão de Conflitos</li>
-                          <li>Suporte à liderança em tomadas de decisão sobre pessoas. </li>
-                        </ol>
+                    <div class="team-info">
+                        <p class="team-area">Liderança & Saúde Mental</p>
+                        <h3 class="team-name">Cristiane Gomes de Souza</h3>
+                        <p class="team-quote">"Doutora em linguística e psicóloga organizacional, especialista em equidade de gênero e desenvolvimento de lideranças."</p>
+                        <p class="team-expertise-title">Expertise</p>
+                        <div class="team-expertise">
+                            <span>Protocolos NR1</span>
+                            <span>Mentoria Estruturada</span>
+                            <span>Cultura Institucional</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="img/domingos.png" alt="Domingos Sávio S. Leão" />
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="img/domingos.png" alt="Domingos Sávio S. Leão" class="team-img">
                     </div>
-                    <div class="member-description">
-                        <h2>Cooperado Domingos Sávio S. Leão</h2>
-                        <h3>Mini-Currículo</h3> 
-                        <p>Graduado em Engenharia Elétrica, com especializações em Gestão Empresarial e em Marketing. Após uma carreira profissional de mais de 20 anos na área de gestão de negócios em empresas nacionais e internacionais, atua há 18 anos como Consultor Organizacional, nas áreas de Planejamento, Gestão por Processos e Gestão da Qualidade. Realiza consultorias junto ao Sebrae e Fundação Nacional da Qualidade (FNQ), atuando também como avaliador de Gestão da Qualidade com base no Modelo de Excelência da Gestão da (FNQ) nos prêmios Melhores em Gestão e SomosCoop.</p>
-                        <br>
-                        <h3>Áreas de atuação</h3>
-                        <ol>
-                          <li>Gestão da Qualidade</li>
-                          <li>Modelo de Excelência da Gestão - MEG22 </li>
-                          <li>Mapeamento e Controle de Processos</li>
-                        </ol>
-                    </div>
-                </div>
-
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="img/ednildo.png" alt="Ednildo José da Silva" />
-                    </div>
-                    <div class="member-description">
-                        <h2>Cooperado Ednildo José da Silva</h2>
-                        <h3>Mini-Currículo</h3> 
-                        <p>Graduado em Administração Financeira, com MBA em Finanças Corporativas, Controladoria e Auditoria. Possui Certificação Internacional ITIL. É Sócio Fundador e Diretor Presidente da MACROCOOP - Cooperativa de Trabalho dos Profissionais em Informática e Telecomunicações Ltda. Palestrante e instrutor nas áreas de cooperativismo, associativismo, empreendedorismo, finanças pessoais, planejamento estratégico, plano de negócio e análise de viabilidade técnica econômico e financeira para implantação ou expansão de negócios.</p>
-                        <br>
-                        <h3>Áreas de atuação</h3>
-                        <ol>
-                          <li>Instrutoria em cooperativismo e associativismo</li>
-                          <li>Consultor em Finanças Pessoais </li>
-                          <li>Consultor em Planejamento Estratégico e Plano de Negócio</li>
-                        </ol>
+                    <div class="team-info">
+                        <p class="team-area">Processos & Qualidade</p>
+                        <h3 class="team-name">Domingos Sávio S. Leão</h3>
+                        <p class="team-quote">"Engenheiro e Consultor FNQ com 18 anos de atuação em Planejamento e Gestão da Qualidade com base no MEG22."</p>
+                        <p class="team-expertise-title">Expertise</p>
+                        <div class="team-expertise">
+                            <span>Gestão da Qualidade</span>
+                            <span>Modelo de Excelência</span>
+                            <span>Mapeamento de Processos</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="img/edson-sa.png" alt="Edson Sá" />
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="img/debora.png" alt="Débora Lins" class="team-img">
                     </div>
-                    <div class="member-description">
-                        <h2>Cooperado Edson Sá</h2>
-                        <h3>Mini-Currículo</h3> 
-                        <p>Graduado em Administração. Consultor empresarial especializado em planejamento estratégico, liderança, desenvolvimento organizacional e fortalecimento de cooperativas. Possui MBA em Desenvolvimento Humano e Psicologia Positiva e especializações em Desenvolvimento Organizacional e Coaching & Liderança. Atua como palestrante e professor, capacitando gestores, empreendedores e cooperados, promovendo inovação, excelência em gestão e potencialização da atuação de líderes</p>
-                        <br>
-                        <h3>Áreas de atuação</h3>
-                        <ol>
-                          <li>Coaching, Mentoria e Orientação Empresarial</li>
-                          <li>Relacionamento com o cliente </li>
-                          <li>Planejamento Estratégico</li>
-                          <li>MEG / PDGC</li>
-                        </ol>
+                    <div class="team-info">
+                        <p class="team-area">Gestão de RH & Licitações</p>
+                        <h3 class="team-name">Débora Lins</h3>
+                        <p class="team-quote">"Especialista em gestão de pessoas, desenvolvimento organizacional e consultoria em licitações."</p>
+                        <p class="team-expertise-title">Expertise</p>
+                        <div class="team-expertise">
+                            <span>Gestão de RH</span>
+                            <span>Licitações</span>
+                            <span>Clima Organizacional</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="img/lucas.png" alt="Lucas Henrique B. Nobre" />
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="img/ednildo.png" alt="Ednildo Silva" class="team-img">
                     </div>
-                    <div class="member-description">
-                        <h2>Cooperado Lucas Henrique B. Nobre</h2>
-                        <h3>Mini-Currículo</h3> 
-                        <p>Contador, empresário e perito judicial, com mais de 13 anos de experiência em gestão contábil, financeira e tributária. MBA em Gestão Financeira, Controladoria e Auditoria (FGV) e MBA em Gestão Tributária, Auditoria e Contabilidade (IPOG). Atuação em planejamento tributário, recuperação de créditos fiscais, negociação de débitos e organização financeira de empresas nos regimes Simples, Lucro Presumido e Lucro Real.</p>
-                        <br>
-                        <h3>Áreas de atuação</h3>
-                        <ol>
-                          <li>Gestão Tributária e Planejamento Tributário</li>
-                          <li>Recuperação de Créditos Fiscais</li>
-                          <li>Negociação de Débitos Tributários</li>
-                          <li>BPO Financeiro e Gestão de Fluxo de Caixa</li>
-                          <li>Perícia Contábil e Financeira. </li>
-                        </ol>
+                    <div class="team-info">
+                        <p class="team-area">Finanças & Cooperativismo</p>
+                        <h3 class="team-name">Ednildo Silva</h3>
+                        <p class="team-quote">"MBA em Finanças Corporativas com vasta experiência em cooperativismo e planejamento estratégico."</p>
+                        <p class="team-expertise-title">Expertise</p>
+                        <div class="team-expertise">
+                            <span>Cooperativismo</span>
+                            <span>Finanças Pessoais</span>
+                            <span>Plano de Negócio</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="team-member">
-                    <div class="member-image">
-                        <img src="img/rafael.png" alt="Rafael Aparecido Bezerra" />
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="img/edson-sa.png" alt="Edson Sá" class="team-img">
                     </div>
-                    <div class="member-description">
-                        <h2>Cooperado Rafael Aparecido Bezerra</h2>
-                        <h3>Mini-Currículo</h3> 
-                        <p>Graduado em Comunicação Social com habilitação em Publicidade e Propaganda. Mais de 15 anos de atuação em Comunicação Publicitária, com sólida experiência em produção publicitária, planejamento de mídia e compra de espaços nos principais veículos de mídia como TV, rádio, ooh e dooh. Especialista em Comunicação Digital e Novas Mídias. Visão analítica, organização e expertise em gestão de campanhas orientadas por dados. Atuou em diversos segmentos do mercado, coordenando produções gráficas e audiovisuais, conduzindo negociações estratégicas com fornecedores e veículos, participação em campanhas premiadas ao longo da carreira.</p>
-                        <br>
-                        <h3>Áreas de atuação</h3>
-                        <ol>
-                          <li>Produção Publicitária</li>
-                          <li>Planejamento de Mídia </li>
-                          <li>Compra de espaços nos veículos de mídia</li>
-                          <li>Comunicação Digital</li>
-                        </ol>
+                    <div class="team-info">
+                        <p class="team-area">Mentoria & Coaching</p>
+                        <h3 class="team-name">Edson Sá</h3>
+                        <p class="team-quote">"Consultor empresarial especializado em planejamento estratégico, liderança e desenvolvimento organizacional."</p>
+                        <p class="team-expertise-title">Expertise</p>
+                        <div class="team-expertise">
+                            <span>Coaching</span>
+                            <span>Mentoria</span>
+                            <span>Planejamento Estratégico</span>
+                        </div>
                     </div>
                 </div>
 
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="img/lucas.png" alt="Lucas Nobre" class="team-img">
+                    </div>
+                    <div class="team-info">
+                        <p class="team-area">Perícia & Gestão Tributária</p>
+                        <h3 class="team-name">Lucas Nobre</h3>
+                        <p class="team-quote">"Contador e perito judicial com MBA em Gestão Tributária e mais de 13 anos de experiência."</p>
+                        <p class="team-expertise-title">Expertise</p>
+                        <div class="team-expertise">
+                            <span>Perícia Contábil</span>
+                            <span>Gestão Tributária</span>
+                            <span>BPO Financeiro</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="img/rafael.png" alt="Rafael Bezerra" class="team-img">
+                    </div>
+                    <div class="team-info">
+                        <p class="team-area">Comunicação & Publicidade</p>
+                        <h3 class="team-name">Rafael Bezerra</h3>
+                        <p class="team-quote">"Especialista em comunicação publicitária com mais de 15 anos em planejamento de mídia e produção."</p>
+                        <p class="team-expertise-title">Expertise</p>
+                        <div class="team-expertise">
+                            <span>Produção Publicitária</span>
+                            <span>Planejamento de Mídia</span>
+                            <span>Comunicação Digital</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    
-    <section class="contact" id="contact">
+
+    <section class="contact-section" id="contato">
         <div class="container">
-            <h2 class="section-title">Entre em Contato</h2>
-            <div class="contact-form-container">
-                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="ed5a6388-7807-43b7-a867-dc0db061fd9f" />
-                    <input type="hidden" name="subject" value="[COOTENE] Novo contato" />
-                    <div class="form-group">
-                        <label for="name">Nome:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mensagem:</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Enviar</button>
-                    <p class="form-center" id="result"></p>
-                </form>
+            <div class="contact-content">
+                <div class="contact-header">
+                    <h2>Pronto para o próximo nível?</h2>
+                    <p>Inicie uma conversa com nossos especialistas e descubra como a COOTENE pode transformar o futuro do seu negócio.</p>
+                </div>
+                <div class="contact-form-card">
+                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="ed5a6388-7807-43b7-a867-dc0db061fd9f">
+                        <input type="hidden" name="subject" value="[COOTENE] Novo contato">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="name" required placeholder="Seu nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Seu Melhor E-mail</label>
+                            <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Como podemos ajudar?</label>
+                            <textarea id="message" name="message" rows="4" required placeholder="Sua mensagem..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Enviar Mensagem</button>
+                        <p id="result" style="text-align: center; margin-top: 16px;"></p>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
-    
+
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <p><img src="img/somos-coop-2.png" alt="Somos Coop"/></p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <img src="img/logo-small2.png" alt="COOTENE" class="logo-img">
+                    </a>
+                    <img src="img/somos-coop-2.png" alt="Somos Coop" style="margin-top: 20px; height: 40px;">
                 </div>
-                <div class="social-links">
-                  <a href="#home"><img style="height: 90px" src="img/logo.png" alt="COOTENE Logo"/></a>
+                <div>
+                    <h4 class="footer-title">Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#proposito">Propósito</a></li>
+                        <li><a href="#especialistas">Especialistas</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Contato</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contato@cootene.coop.br">contato@cootene.coop.br</a></li>
+                        <li>Maceió, AL - Brasil</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </footer>
-    <script>
-      const form = document.getElementById("contact-form");
-      const result = document.getElementById("result");
-      const url = "https://api.web3forms.com/submit";
 
-      form.addEventListener("submit", function (e) {
-        const formData = new FormData(form);
-        e.preventDefault();
-        var object = {};
-        formData.forEach((value, key) => {
-          object[key] = value;
+    <script>
+        const form = document.getElementById("contact-form");
+        const result = document.getElementById("result");
+        const url = "https://api.web3forms.com/submit";
+
+        form.addEventListener("submit", function (e) {
+            const formData = new FormData(form);
+            e.preventDefault();
+            var object = {};
+            formData.forEach((value, key) => {
+                object[key] = value;
+            });
+            var json = JSON.stringify(object);
+            result.innerHTML = "Enviando...";
+
+            fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json"
+                },
+                body: json
+            })
+                .then(async (response) => {
+                    let json = await response.json();
+                    if (response.status == 200) {
+                        result.innerHTML = "Obrigado pelo contato!";
+                        result.style.color = "#10b981";
+                    } else {
+                        console.log(response);
+                        result.innerHTML = "Erro ao enviar! tente novamente";
+                        result.style.color = "#ef4444";
+                    }
+                })
+                .catch((error) => {
+                    console.log(error);
+                    result.innerHTML = "Erro ao enviar! tente novamente";
+                    result.style.color = "#ef4444";
+                })
+                .then(function () {
+                    form.reset();
+                    setTimeout(() => {
+                        result.innerHTML = "";
+                    }, 5000);
+                });
         });
-        var json = JSON.stringify(object);
-        result.innerHTML = "Enviando...";
 
-        fetch(url, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json"
-          },
-          body: json
-        })
-          .then(async (response) => {
-            let json = await response.json();
-            if (response.status == 200) {
-              result.innerHTML = "Obrigado pelo contato!";
-            } else {
-              console.log(response);
-              result.innerHTML = "Erro ao enviar! tente novamente";
-            }
-          })
-          .catch((error) => {
-            console.log(error);
-            result.innerHTML = "Erro ao enviar! tente novamente";
-          })
-          .then(function () {
-            form.reset();
-            setTimeout(() => {
-              result.style.display = "none";
-            }, 5000);
-          });
-      });
-
-    </script>
-    <script>
-        // Smooth scrolling for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
             });
         });
     </script>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JX9TZ05SG6"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-JX9TZ05SG6');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-JX9TZ05SG6');
     </script>
 </body>
 </html>
