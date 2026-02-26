@@ -96,7 +96,7 @@
             <div class="team-info">
               <p class="team-area">Finanças & Compliance</p>
               <h3 class="team-name">Artur Lima da Silva</h3>
-              <p class="team-quote">"Contador e empresário contábil com MBA pela FGV e mais de 20 anos de experiência em gestão financeira e cooperativismo."</p>
+              <p class="team-quote">Contador e empresário contábil com MBA pela FGV e mais de 20 anos de experiência em gestão financeira e cooperativismo.</p>
               <p class="team-expertise-title">Expertise</p>
               <div class="team-expertise">
                 <span>Contabilidade Geral</span>
@@ -113,7 +113,7 @@
             <div class="team-info">
               <p class="team-area">Liderança & Saúde Mental</p>
               <h3 class="team-name">Cristiane Gomes de Souza</h3>
-              <p class="team-quote">"Doutora em linguística e psicóloga organizacional, especialista em equidade de gênero e desenvolvimento de lideranças."</p>
+              <p class="team-quote">Doutora em linguística e psicóloga organizacional, especialista em equidade de gênero e desenvolvimento de lideranças.</p>
               <p class="team-expertise-title">Expertise</p>
               <div class="team-expertise">
                 <span>Protocolos NR1</span>
@@ -130,7 +130,7 @@
             <div class="team-info">
               <p class="team-area">Processos & Qualidade</p>
               <h3 class="team-name">Domingos Sávio S. Leão</h3>
-              <p class="team-quote">"Engenheiro e Consultor FNQ com 18 anos de atuação em Planejamento e Gestão da Qualidade com base no MEG22."</p>
+              <p class="team-quote">Engenheiro e Consultor FNQ com 18 anos de atuação em Planejamento e Gestão da Qualidade com base no MEG22.</p>
               <p class="team-expertise-title">Expertise</p>
               <div class="team-expertise">
                 <span>Gestão da Qualidade</span>
@@ -147,7 +147,7 @@
             <div class="team-info">
               <p class="team-area">Gestão de RH & Licitações</p>
               <h3 class="team-name">Débora Lins</h3>
-              <p class="team-quote">"Especialista em gestão de pessoas, desenvolvimento organizacional e consultoria em licitações."</p>
+              <p class="team-quote">Especialista em gestão de pessoas, desenvolvimento organizacional e consultoria em licitações.</p>
               <p class="team-expertise-title">Expertise</p>
               <div class="team-expertise">
                 <span>Gestão de RH</span>
@@ -164,7 +164,7 @@
             <div class="team-info">
               <p class="team-area">Finanças & Cooperativismo</p>
               <h3 class="team-name">Ednildo Silva</h3>
-              <p class="team-quote">"MBA em Finanças Corporativas com vasta experiência em cooperativismo e planejamento estratégico."</p>
+              <p class="team-quote">MBA em Finanças Corporativas com vasta experiência em cooperativismo e planejamento estratégico.</p>
               <p class="team-expertise-title">Expertise</p>
               <div class="team-expertise">
                 <span>Cooperativismo</span>
@@ -181,7 +181,7 @@
             <div class="team-info">
               <p class="team-area">Mentoria & Coaching</p>
               <h3 class="team-name">Edson Sá</h3>
-              <p class="team-quote">"Consultor empresarial especializado em planejamento estratégico, liderança e desenvolvimento organizacional."</p>
+              <p class="team-quote">Consultor empresarial especializado em planejamento estratégico, liderança e desenvolvimento organizacional.</p>
               <p class="team-expertise-title">Expertise</p>
               <div class="team-expertise">
                 <span>Coaching</span>
@@ -198,7 +198,7 @@
             <div class="team-info">
               <p class="team-area">Perícia & Gestão Tributária</p>
               <h3 class="team-name">Lucas Nobre</h3>
-              <p class="team-quote">"Contador e perito judicial com MBA em Gestão Tributária e mais de 13 anos de experiência."</p>
+              <p class="team-quote">Contador e perito judicial com MBA em Gestão Tributária e mais de 13 anos de experiência.</p>
               <p class="team-expertise-title">Expertise</p>
               <div class="team-expertise">
                 <span>Perícia Contábil</span>
@@ -215,7 +215,7 @@
             <div class="team-info">
               <p class="team-area">Comunicação & Publicidade</p>
               <h3 class="team-name">Rafael Bezerra</h3>
-              <p class="team-quote">"Especialista em comunicação publicitária com mais de 15 anos em planejamento de mídia e produção."</p>
+              <p class="team-quote">Especialista em comunicação publicitária com mais de 15 anos em planejamento de mídia e produção.</p>
               <p class="team-expertise-title">Expertise</p>
               <div class="team-expertise">
                 <span>Produção Publicitária</span>
@@ -293,16 +293,13 @@
     const url = "https://api.web3forms.com/submit";
 
     form.addEventListener("submit", function (e) {
-      +            e.preventDefault();
+      e.preventDefault();
       const formData = new FormData(form);
-      -            e.preventDefault();
-      -            var object = {};
-      +            const object = {};
+      const object = {};
       formData.forEach((value, key) => {
         object[key] = value;
       });
-      -            var json = JSON.stringify(object);
-      +            const jsonBody = JSON.stringify(object);
+      const jsonBody = JSON.stringify(object);
       result.innerHTML = "Enviando...";
 
       fetch(url, {
@@ -311,16 +308,14 @@
           "Content-Type": "application/json",
           Accept: "application/json"
         },
-        -                body: json
-          +                body: jsonBody
+        body: jsonBody
       })
         .then(async (response) => {
-          -                    let json = await response.json();
-          +                    const responseData = await response.json();
+          const responseData = await response.json();
           if (response.status == 200) {
             result.innerHTML = "Obrigado pelo contato!";
             result.style.color = "#10b981";
-            +                        form.reset();
+            form.reset();
           } else {
             console.log(response);
             result.innerHTML = "Erro ao enviar! tente novamente";
@@ -333,7 +328,6 @@
           result.style.color = "#ef4444";
         })
         .then(function () {
-          -                    form.reset();
           setTimeout(() => {
             result.innerHTML = "";
           }, 5000);
